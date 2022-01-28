@@ -7,58 +7,146 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Table(name = "articles")
-@AllArgsConstructor
-@NoArgsConstructor
 public class Article {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Getter @Setter
 	private Integer id;
 	
 	@Column(name = "title", nullable = false, length = 100)
-	@Getter @Setter
 	private String title;
 	
 	@Column(name = "title_en", nullable = true, length = 100)
-	@Getter @Setter
 	private String titleEn;
 	
 	@Column(name="description", nullable = false)
-	@Getter @Setter
 	private String description;
 	
 	@Column(name="description_en", nullable = true)
-	@Getter @Setter
 	private String descriptionEn;
 	
 	@Column(name = "picture", nullable = true, length = 200)
-	@Getter @Setter
 	private String picture;	
 	
-	@Column(name = "title_en", nullable = true, length = 100)
-	@Getter @Setter
+	@Column(name = "location", nullable = true, length = 100)
 	private String location;
 	
 	@Column(name="latitude", nullable = true)
-	@Getter @Setter
 	private Double latitude;
 	
 	@Column(name="longitude", nullable = true)
-	@Getter @Setter
 	private Double longitude;
 	
-	@OneToMany(mappedBy = "articles")
-	@Getter @Setter
-    private Set<ArticleCategories> articleCategories;
+	@ManyToMany
+	@JoinTable(
+	  name = "article_categories", 
+	  joinColumns = @JoinColumn(name = "article_id"), 
+	  inverseJoinColumns = @JoinColumn(name = "category_id"))
+	Set<Category> articleCategories;
+	
+	public Article() {}
+
+	public Article(Integer id, String title, String titleEn, String description, String descriptionEn, String picture,
+			String location, Double latitude, Double longitude, Set<Category> articleCategories) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.titleEn = titleEn;
+		this.description = description;
+		this.descriptionEn = descriptionEn;
+		this.picture = picture;
+		this.location = location;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.articleCategories = articleCategories;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getTitleEn() {
+		return titleEn;
+	}
+
+	public void setTitleEn(String titleEn) {
+		this.titleEn = titleEn;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDescriptionEn() {
+		return descriptionEn;
+	}
+
+	public void setDescriptionEn(String descriptionEn) {
+		this.descriptionEn = descriptionEn;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public Double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(Double latitude) {
+		this.latitude = latitude;
+	}
+
+	public Double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(Double longitude) {
+		this.longitude = longitude;
+	}
+
+	public Set<Category> getArticleCategories() {
+		return articleCategories;
+	}
+
+	public void setArticleCategories(Set<Category> articleCategories) {
+		this.articleCategories = articleCategories;
+	}
+	
+	
 }

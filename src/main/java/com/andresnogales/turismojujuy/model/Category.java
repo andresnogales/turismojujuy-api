@@ -1,41 +1,60 @@
 package com.andresnogales.turismojujuy.model;
 
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Table(name = "categories")
-@AllArgsConstructor
-@NoArgsConstructor
 public class Category {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Getter @Setter
 	private Integer id;
 	
 	@Column(name = "title", nullable = false, length = 100)
-	@Getter @Setter
 	private String title;
 	
 	@Column(name = "title_en", nullable = true, length = 100)
-	@Getter @Setter
 	private String titleEn;
 	
-	@OneToMany(mappedBy = "categories")
-	@Getter @Setter
-	private Set<ArticleCategories> articleCategories;
+	
+	public Category() {}
+
+	public Category(Integer id, String title, String titleEn) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.titleEn = titleEn;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getTitleEn() {
+		return titleEn;
+	}
+
+	public void setTitleEn(String titleEn) {
+		this.titleEn = titleEn;
+	}
+
+	
 }
