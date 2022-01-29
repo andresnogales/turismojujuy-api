@@ -26,4 +26,9 @@ public class ArticleController {
 	public ResponseEntity<?> getArticles(){
 		return new ResponseEntity<>(articleService.findAll(),HttpStatus.OK);
 	}
+	
+	@GetMapping("/category/{id}")
+	public ResponseEntity<?> getArticlesByCategory(@PathVariable("id") Integer id){
+		return new ResponseEntity<>(articleService.findByCategory(id),HttpStatus.OK);
+	}
 }
