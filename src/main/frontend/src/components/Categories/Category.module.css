@@ -1,0 +1,21 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+}
+
+.category__title {
+  font-size: 13px;
+  letter-spacing: 0.075em;
+  font-weight: 800;
+  color: #1f1c31;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.category img {
+  width: 100%;
+}
