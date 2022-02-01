@@ -1,0 +1,38 @@
+.card-container {
+  background-color: #fff;
+  width: 230px;
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.card__image img {
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+  border-radius: 5px 5px 0 0;
+}
+
+.card__title {
+  color: #000;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.card__title h3:hover {
+  transition: 0.3s;
+  color: #df8c07;
+}
+
+.card__tags {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card__tags span {
+  background-color: #ffecc8;
+  font-size: 12px;
+  color: #df8c07;
+  border-radius: 5px;
+  padding: 4px;
+}

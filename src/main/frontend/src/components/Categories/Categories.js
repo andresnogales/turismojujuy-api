@@ -17,7 +17,7 @@ const Categories = () => {
       titleEs: "Cocina y Vinos",
     },
     {
-      id: 3,
+      id: 5,
       url: require("../../assets/comunitario.png"),
       titleEs: "Comunitario",
     },
@@ -27,7 +27,7 @@ const Categories = () => {
       titleEs: "Cultural",
     },
     {
-      id: 5,
+      id: 3,
       url: require("../../assets/imperdibles.png"),
       titleEs: "Imperdibles",
     },
@@ -44,7 +44,11 @@ const Categories = () => {
       <div className={classes.container}>
         {categoriesImages.map((category) => {
           return (
-            <Link to={"/cat/" + category.id}>
+            <Link
+              className={classes["category-link"]}
+              to={"/cat/" + category.id}
+              key={category.id}
+            >
               <Category
                 image={category.url}
                 title={category.titleEs}

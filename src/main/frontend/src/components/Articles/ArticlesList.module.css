@@ -1,0 +1,31 @@
+.section-title {
+  font-size: calc(15px + 3vw);
+  line-height: 1.2;
+  padding: 2rem 0;
+}
+
+.articles {
+  padding: 1rem;
+  width: 0 auto;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,9 +1,14 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import { articlesListReducer, articleReducer } from "./reducers/articleReducer";
+import {
+  articlesListReducer,
+  articleReducer,
+  articlesListByCategoryReducer,
+} from "./reducers/articleReducer";
 
 const reducer = combineReducers({
   articleList: articlesListReducer,
+  articleListByCategory: articlesListByCategoryReducer,
   article: articleReducer,
 });
 

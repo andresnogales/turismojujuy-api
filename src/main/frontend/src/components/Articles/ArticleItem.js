@@ -1,10 +1,19 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ArticleContext } from "../../context/articleContext";
+import Card from "../Card/Card";
 import classes from "./ArticleItem.module.css";
 const ArticleItem = (props) => {
-  const { title, picture } = props.item;
+  const { article, setArticle } = useContext(ArticleContext);
+
+  const selectCardHandler = () => {
+    setArticle(props.item);
+  };
   return (
-    <div>
-      <img src={picture} alt={title} width="300"></img>
-      <h3>{title}</h3>
+    <div className="wrapper" onClick={selectCardHandler}>
+      <Link className={classes["link"]} to={"/article/" + props.item.id}>
+        <Card item={props.item} />
+      </Link>
     </div>
   );
 };

@@ -1,0 +1,16 @@
+.entry-content {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.entry-content h1 {
+  font-size: calc(15px + 3vw);
+  line-height: 1.2;
+  padding: 1rem 0;
+}
+
+.entry-content p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}

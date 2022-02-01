@@ -7,7 +7,7 @@ const Home = () => {
         Conéctate con lo auténtico, con la energía pura de una tierra
         extraordinaria.
       </h1>
-      <Categories></Categories>
+      <Categories />
     </main>
   );
 };
