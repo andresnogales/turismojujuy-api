@@ -15,12 +15,10 @@ const Footer = () => {
         </div>
       </div>
       <div className={classes["site-footer"]}>
-        <div className={classes["footer-text"]}>
-          <p>
-            © 2022 Ministerio de Cultura y Turismo de Jujuy | Andrés Nogales
-            developer.
-          </p>
-        </div>
+        <p>
+          © 2022 Ministerio de Cultura y Turismo de Jujuy | Andrés Nogales
+          developer.
+        </p>
       </div>
     </footer>
   );

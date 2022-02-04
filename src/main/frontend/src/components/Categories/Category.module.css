@@ -3,8 +3,11 @@
   flex-direction: column;
   padding: 2rem;
   background-color: #fff;
-  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.02);
+  box-shadow: 2px -2px 28px -17px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 2px -2px 28px -17px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 2px -2px 28px -17px rgba(0, 0, 0, 0.48);
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .category__title {
