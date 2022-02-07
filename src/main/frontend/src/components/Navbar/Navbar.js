@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import classes from "./Navbar.module.css";
 
@@ -5,7 +6,9 @@ const Navbar = () => {
   return (
     <nav className={classes.navbar}>
       <div className={classes.logo}>
-        <img src={Logo} width="160" alt="Jujuy Turismo" />
+        <Link to={"/"}>
+          <img src={Logo} width="160" alt="Jujuy Turismo" />
+        </Link>
       </div>
       <ul className={classes["navbar__items"]}>
         <div className={classes["navbar__item-links"]}>

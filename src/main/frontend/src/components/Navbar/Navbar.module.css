@@ -46,9 +46,5 @@
 .logo img {
   width: 188px;
   padding: 10px 0;
-}
-
-@media (max-width: 960px) {
-  .navbar__items {
-  }
+  cursor: pointer;
 }

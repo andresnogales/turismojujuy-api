@@ -1,34 +1,44 @@
-import { Fragment } from "react";
+import { Fragment, useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CategoryContext } from "../../context/categoryContext";
 
 import classes from "./Categories.module.css";
 
 import Category from "./Category";
 const Categories = () => {
-  const categoriesImages = [
+  const { category, setCategory } = useContext(CategoryContext);
+
+  const onClickCategoryHandler = (idCategory) => {
+    console.log(idCategory);
+    const categorySelected = categoriesList.find((c) => c.id === idCategory);
+    setCategory(categorySelected);
+    console.log(categorySelected);
+  };
+
+  const categoriesList = [
     {
       id: 1,
-      url: require("../../assets/aventura_naturaleza.png"),
+      picture: require("../../assets/aventura_naturaleza.png"),
       titleEs: "Aventura y Naturaleza",
     },
     {
       id: 2,
-      url: require("../../assets/cocina_vinos.png"),
+      picture: require("../../assets/cocina_vinos.png"),
       titleEs: "Cocina y Vinos",
     },
     {
       id: 5,
-      url: require("../../assets/comunitario.png"),
+      picture: require("../../assets/comunitario.png"),
       titleEs: "Comunitario",
     },
     {
       id: 4,
-      url: require("../../assets/cultural.png"),
+      picture: require("../../assets/cultural.png"),
       titleEs: "Cultural",
     },
     {
       id: 3,
-      url: require("../../assets/imperdibles.png"),
+      picture: require("../../assets/imperdibles.png"),
       titleEs: "Imperdibles",
     },
     {
@@ -41,8 +51,9 @@ const Categories = () => {
   return (
     <section>
       <h3 className={classes["section-title"]}>Qué hacer en Jujuy</h3>
+
       <div className={classes.container}>
-        {categoriesImages.map((category) => {
+        {categoriesList.map((category) => {
           return (
             <Link
               className={classes["category-link"]}
@@ -50,9 +61,11 @@ const Categories = () => {
               key={category.id}
             >
               <Category
-                image={category.url}
+                picture={category.picture}
                 title={category.titleEs}
                 key={category.id}
+                id={category.id}
+                onClick={onClickCategoryHandler}
               ></Category>
             </Link>
           );

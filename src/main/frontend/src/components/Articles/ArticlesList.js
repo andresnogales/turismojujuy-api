@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { listArticlesByCategory } from "../../actions/articleAction";
 import ArticleItem from "./ArticleItem";
-
+import { CategoryContext } from "../../context/categoryContext";
 import classes from "./ArticlesList.module.css";
 
 const ArticlesList = (props) => {
@@ -13,13 +13,21 @@ const ArticlesList = (props) => {
   const articleList = useSelector((state) => state.articleListByCategory);
   const { error, articles } = articleList;
 
+  const { category, setCategory } = useContext(CategoryContext);
+  console.log(category);
+
   useEffect(() => {
     dispatch(listArticlesByCategory(id));
   }, [dispatch]);
 
   return (
     <div className={classes["articles"]}>
-      <h1 className={classes["section-title"]}>Dummy Title {id}</h1>
+      <CategoryContext.Consumer>
+        {(value) => (
+          <h1 className={classes["section-title"]}>{value.category.titleEs}</h1>
+        )}
+      </CategoryContext.Consumer>
+
       <div className={classes["container"]}>
         {articles && articles.length === 0 ? (
           <p>Cargando...</p>
