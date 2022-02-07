@@ -43,7 +43,7 @@ const Categories = () => {
     },
     {
       id: 6,
-      url: require("../../assets/religioso.png"),
+      picture: require("../../assets/religioso.png"),
       titleEs: "Religioso",
     },
   ];

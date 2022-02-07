@@ -48,3 +48,9 @@
   padding: 10px 0;
   cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+  .navbar__items {
+    display: none;
+  }
+}

@@ -9,6 +9,7 @@ const ArticleItem = (props) => {
   const selectCardHandler = () => {
     setArticle(props.item);
   };
+
   return (
     <div className="wrapper" onClick={selectCardHandler}>
       <Link className={classes["link"]} to={"/article/" + props.item.id}>

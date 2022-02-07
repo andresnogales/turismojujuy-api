@@ -27,12 +27,24 @@
 .card__tags {
   text-align: center;
   padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card__tags span {
   background-color: #ffecc8;
   font-size: 12px;
+  font-weight: bold;
   color: #df8c07;
   border-radius: 5px;
   padding: 4px;
+  margin: 0.2rem;
+  white-space: nowrap;
+}
+
+.card__tags span:hover {
+  background-color: #df8c07;
+  color: #ffecc8;
 }

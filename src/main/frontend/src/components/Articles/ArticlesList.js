@@ -14,8 +14,6 @@ const ArticlesList = (props) => {
   const { error, articles } = articleList;
 
   const { category, setCategory } = useContext(CategoryContext);
-  console.log(category);
-
   useEffect(() => {
     dispatch(listArticlesByCategory(id));
   }, [dispatch]);
