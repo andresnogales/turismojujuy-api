@@ -14,25 +14,39 @@ const Navbar = () => {
       <ul className={classes["navbar__items"]}>
         <div className={classes["navbar__item-links"]}>
           <li>
-            <a href="#">Inicio</a>
+            <Link className={classes["link"]} to={"/"}>
+              Inicio
+            </Link>
           </li>
           <li>
-            <a href="#">Qué hacer</a>
+            <a className={classes["link"]} href="#">
+              Qué hacer
+            </a>
           </li>
           <li>
-            <a href="#">Destinos</a>
+            <a className={classes["link"]} href="#">
+              Destinos
+            </a>
           </li>
           <li>
-            <a href="#">Servicios</a>
+            <a className={classes["link"]} href="#">
+              Servicios
+            </a>
           </li>
           <li>
-            <a href="#">Información</a>
+            <a className={classes["link"]} href="#">
+              Información
+            </a>
           </li>
           <li>
-            <a href="#">Institucional</a>
+            <a className={classes["link"]} href="#">
+              Institucional
+            </a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a className={classes["link"]} href="#">
+              Blog
+            </a>
           </li>
         </div>
       </ul>
