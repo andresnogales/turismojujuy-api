@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ab812f65.css",
+    "main.js": "/static/js/main.4781009c.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/valles.png": "/static/media/valles.65b49c9d0c5b6acba5ee.png",
+    "static/media/yungas.png": "/static/media/yungas.0d26e8be5490a7058587.png",
+    "static/media/quebrada.png": "/static/media/quebrada.723c0ea2e605cc7e1587.png",
+    "static/media/hero.png": "/static/media/hero.fc1ecb29ee6a8b8a400f.png",
+    "static/media/puna.png": "/static/media/puna.867f94ef8867f83782dc.png",
+    "static/media/aventura_naturaleza.png": "/static/media/aventura_naturaleza.0a119d0865ddc1d2bf35.png",
+    "static/media/comunitario.png": "/static/media/comunitario.a03f78e5fd512f1c9d70.png",
+    "static/media/cocina_vinos.png": "/static/media/cocina_vinos.dcdc1a369e9011b9e5af.png",
+    "static/media/religioso.png": "/static/media/religioso.87e1d1f7e5e566daf6d9.png",
+    "static/media/cultural.png": "/static/media/cultural.c4146df023991f735a51.png",
+    "static/media/imperdibles.png": "/static/media/imperdibles.ab3f5d62cbe026c04bae.png",
+    "static/media/logo.png": "/static/media/logo.4dbd6f30d05424660ee6.png",
+    "index.html": "/index.html",
+    "main.ab812f65.css.map": "/static/css/main.ab812f65.css.map",
+    "main.4781009c.js.map": "/static/js/main.4781009c.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab812f65.css",
+    "static/js/main.4781009c.js"
+  ]
+}
