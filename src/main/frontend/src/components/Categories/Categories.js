@@ -22,27 +22,27 @@ const Categories = () => {
       titleEs: "Aventura y Naturaleza",
     },
     {
-      id: 2,
+      id: 6,
       picture: require("../../assets/cocina_vinos.png"),
       titleEs: "Cocina y Vinos",
     },
     {
-      id: 5,
+      id: 13,
       picture: require("../../assets/comunitario.png"),
       titleEs: "Comunitario",
     },
     {
-      id: 4,
+      id: 7,
       picture: require("../../assets/cultural.png"),
       titleEs: "Cultural",
     },
     {
-      id: 3,
+      id: 12,
       picture: require("../../assets/imperdibles.png"),
       titleEs: "Imperdibles",
     },
     {
-      id: 6,
+      id: 11,
       picture: require("../../assets/religioso.png"),
       titleEs: "Religioso",
     },

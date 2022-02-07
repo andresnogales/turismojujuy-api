@@ -7,7 +7,7 @@ const ArticleDetails = (props) => {
       {(value) => (
         <article className={classes["entry-content"]}>
           <h1>{value.article.title}</h1>
-          <p>{value.article.description}</p>
+          <p className={classes["display-text"]}>{value.article.description}</p>
         </article>
       )}
     </ArticleContext.Consumer>

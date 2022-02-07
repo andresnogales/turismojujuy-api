@@ -14,3 +14,7 @@
   line-height: 26px;
   font-weight: 400;
 }
+
+.display-text {
+  white-space: pre-line;
+}

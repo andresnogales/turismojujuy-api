@@ -1,4 +1,5 @@
 import Categories from "../components/Categories/Categories";
+import Regions from "../components/Regions/Regions";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         extraordinaria.
       </h1>
       <Categories />
+      <Regions />
     </main>
   );
 };
