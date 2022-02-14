@@ -4,7 +4,6 @@ import classes from "./HamburgerMenu.module.css";
 const HamburgerMenu = () => {
   const [state, setState] = useState("");
   const toggleMobileMenu = () => {
-    console.log(state);
     if (state === "") setState("open");
     else setState("");
   };

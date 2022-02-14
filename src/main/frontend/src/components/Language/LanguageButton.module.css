@@ -1,0 +1,21 @@
+.button {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  padding: 0.4rem;
+  text-align: center;
+  width: 34px;
+  height: 34px;
+  fill: #252525;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #f9b342;
+  transition: 0.2s;
+}
+
+.button:hover svg path {
+  fill: #f9b342;
+  stroke: #fff;
+  transition: 0.2s;
+}
