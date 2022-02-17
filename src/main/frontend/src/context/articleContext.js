@@ -5,4 +5,5 @@ export const ArticleContext = React.createContext({
   title: "",
   description: "",
   picture: "",
+  setArticle: () => {},
 });

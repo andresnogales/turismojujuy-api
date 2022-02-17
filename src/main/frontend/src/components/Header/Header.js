@@ -8,17 +8,17 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const { article, setArticle } = useContext(ArticleContext);
-  const articleHero = article.picture;
+  const articleHero = article ? article.picture : "";
   const history = useNavigate();
   let location = useLocation();
 
   useEffect(() => {
-    console.log("Ejecutando efecto");
-    console.log(location.pathname);
     if (location.pathname === "/") {
       setArticle("");
     }
   }, [history]);
+
+  console.log(article);
 
   return (
     <header className={classes.header}>

@@ -9,7 +9,7 @@ import {
 const reducer = combineReducers({
   articleList: articlesListReducer,
   articleListByCategory: articlesListByCategoryReducer,
-  article: articleReducer,
+  articleDetails: articleReducer,
 });
 
 const middleware = [thunk];

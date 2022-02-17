@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { listArticlesByCategory } from "../../actions/articleAction";
 import ArticleItem from "./ArticleItem";
-import { CategoryContext } from "../../context/categoryContext";
+import { categoriesList } from "../../data/categories";
+
 import classes from "./ArticlesList.module.css";
 
 const ArticlesList = (props) => {
@@ -13,18 +14,15 @@ const ArticlesList = (props) => {
   const articleList = useSelector((state) => state.articleListByCategory);
   const { error, articles } = articleList;
 
-  const { category, setCategory } = useContext(CategoryContext);
   useEffect(() => {
     dispatch(listArticlesByCategory(id));
   }, [dispatch]);
 
+  const category = categoriesList.find((item) => item.id === Number(id));
+
   return (
     <div className={classes["articles"]}>
-      <CategoryContext.Consumer>
-        {(value) => (
-          <h1 className={classes["section-title"]}>{value.category.titleEs}</h1>
-        )}
-      </CategoryContext.Consumer>
+      <h1 className={classes["section-title"]}>{category.title["es"]}</h1>
 
       <div className={classes["container"]}>
         {articles && articles.length === 0 ? (

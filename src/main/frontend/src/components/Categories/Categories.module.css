@@ -21,3 +21,13 @@
 .category-link {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}

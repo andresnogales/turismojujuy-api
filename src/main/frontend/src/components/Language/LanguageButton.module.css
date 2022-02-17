@@ -19,3 +19,41 @@
   stroke: #fff;
   transition: 0.2s;
 }
+
+.language-label {
+  padding: 0 0.2rem;
+}
+
+.sub-menu {
+  padding: 1rem;
+  position: absolute;
+  top: 104px;
+  background-color: #fff;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  right: 10px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+}
+
+.language-switcher:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  border-radius: 0 0 5px 5px;
+}
+
+.sub-menu li {
+  list-style: none;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.selected {
+  font-weight: bold;
+}

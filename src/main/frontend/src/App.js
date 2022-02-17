@@ -7,31 +7,32 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import { ArticleContext } from "./context/articleContext";
-import { CategoryContext } from "./context/categoryContext";
+import { LanguageContext } from "./context/languageContext";
+import { useLanguage } from "./hooks/useLanguage";
 import Home from "./pages/Home";
 function App() {
   const [article, setArticle] = useState("");
   const articleValue = { article, setArticle };
   const [category, setCategory] = useState();
   const categoryValue = { category, setCategory };
+  const [storedlanguage, setSroredLanguage] = useLanguage();
+  const [language, setLanguage] = useState(storedlanguage);
+  const languageValue = { language, setLanguage };
 
   return (
     <BrowserRouter>
-      <ArticleContext.Provider value={articleValue}>
-        <CategoryContext.Provider value={categoryValue}>
+      <LanguageContext.Provider value={languageValue}>
+        <ArticleContext.Provider value={articleValue}>
           <Navbar />
           <Header />
-
-          <div className="main">
-            <Routes>
-              <Route path="/article/:id" element={<ArticleDetails />} />
-              <Route path="/cat/:id" element={<ArticlesList />} />
-              <Route path="/" exact={true} element={<Home />} />
-            </Routes>
-          </div>
-        </CategoryContext.Provider>
-      </ArticleContext.Provider>
-      <Footer></Footer>
+          <Routes>
+            <Route path="/article/:id" element={<ArticleDetails />} />
+            <Route path="/cat/:id" element={<ArticlesList />} />
+            <Route path="/" exact={true} element={<Home />} />
+          </Routes>
+        </ArticleContext.Provider>
+        <Footer></Footer>
+      </LanguageContext.Provider>
     </BrowserRouter>
   );
 }

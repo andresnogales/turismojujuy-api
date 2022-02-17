@@ -26,7 +26,7 @@ export const articlesListByCategoryReducer = (
 export const articleReducer = (state = { article: {} }, action) => {
   switch (action.type) {
     case "ARTICLE_SUCCESS":
-      return { article: action.payload };
+      return { data: action.payload };
     case "ARTICLE_FAIL":
       return { error: action.payload };
     default:

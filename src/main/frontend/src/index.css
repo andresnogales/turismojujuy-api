@@ -16,10 +16,6 @@ code {
   box-sizing: border-box;
 }
 
-main {
-  padding: 1.5rem;
-}
-
 .site-description {
   text-align: center;
   color: #f9b342;
