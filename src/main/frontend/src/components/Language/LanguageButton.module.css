@@ -20,6 +20,12 @@
   transition: 0.2s;
 }
 
+@media only screen and (max-width: 1000px) {
+  .button {
+    margin-right: 1rem;
+  }
+}
+
 .language-label {
   padding: 0 0.2rem;
 }

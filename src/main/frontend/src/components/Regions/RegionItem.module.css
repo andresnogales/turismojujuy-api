@@ -1,14 +1,24 @@
 .item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   align-items: center;
   padding: 1rem;
+  width: 25%;
 }
+
 .item img {
-  width: 160px;
+  width: 80%;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .item {
+    width: 100%;
+  }
+  .item img {
+    width: 50%;
+  }
 }
 
 .item-title {

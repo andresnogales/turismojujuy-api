@@ -13,6 +13,14 @@
   font-size: 14px;
 }
 
+@media only screen and (max-width: 800px) {
+  .footer-widgets {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .footer-area h3 {
   text-transform: uppercase;
 }

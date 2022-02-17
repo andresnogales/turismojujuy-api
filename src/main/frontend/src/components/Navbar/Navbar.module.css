@@ -20,7 +20,6 @@
 }
 
 .navbar__items-container {
-  padding: 0 27px;
   display: inline-flex;
   height: 100%;
 }
@@ -58,6 +57,15 @@
 @media (max-width: 1000px) {
   .navbar__items {
     display: none;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 118px;
   }
 }
 
