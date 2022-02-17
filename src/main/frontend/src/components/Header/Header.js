@@ -18,8 +18,6 @@ const Header = () => {
     }
   }, [history]);
 
-  console.log(article);
-
   return (
     <header className={classes.header}>
       <img src={articleHero ? articleHero : Hero} alt="Paisaje Jujuy" />

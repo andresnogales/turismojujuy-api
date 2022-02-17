@@ -4,12 +4,14 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { listArticlesByCategory } from "../../actions/articleAction";
 import ArticleItem from "./ArticleItem";
+import { LanguageContext } from "../../context/languageContext";
 import { categoriesList } from "../../data/categories";
 
 import classes from "./ArticlesList.module.css";
 
 const ArticlesList = (props) => {
   const { id } = useParams();
+  const { language, setLanguage } = useContext(LanguageContext);
   const dispatch = useDispatch();
   const articleList = useSelector((state) => state.articleListByCategory);
   const { error, articles } = articleList;
@@ -22,7 +24,7 @@ const ArticlesList = (props) => {
 
   return (
     <div className={classes["articles"]}>
-      <h1 className={classes["section-title"]}>{category.title["es"]}</h1>
+      <h1 className={classes["section-title"]}>{category.title[language]}</h1>
 
       <div className={classes["container"]}>
         {articles && articles.length === 0 ? (

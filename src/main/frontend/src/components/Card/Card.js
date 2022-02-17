@@ -1,18 +1,16 @@
 import classes from "./Card.module.css";
 const Card = (props) => {
-  const { title, picture, articleCategories } = props.item;
-
   return (
     <div className={classes["card-container"]}>
       <div className={classes["card__image"]}>
-        <img src={picture} />
+        <img src={props.picture} />
       </div>
       <div className={classes["card__title"]}>
-        <h3>{title}</h3>
+        <h3>{props.title}</h3>
       </div>
       <div className={classes["card__tags"]}>
-        {articleCategories.map((category) => {
-          return <span>{category.title}</span>;
+        {props.tags.map((item) => {
+          return <span>{item}</span>;
         })}
       </div>
     </div>
