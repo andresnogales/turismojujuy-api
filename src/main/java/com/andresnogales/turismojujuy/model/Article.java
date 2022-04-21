@@ -35,8 +35,8 @@ public class Article {
 	@Column(name = "picture", nullable = true, length = 200)
 	private String picture;	
 	
-	@Column(name = "location", nullable = true, length = 100)
-	private String location;
+	@Column(name = "address", nullable = true, length = 100)
+	private String address;
 	
 	@Column(name="latitude", nullable = true)
 	private Double latitude;
@@ -54,7 +54,7 @@ public class Article {
 	public Article() {}
 
 	public Article(Integer id, String title, String titleEn, String description, String descriptionEn, String picture,
-			String location, Double latitude, Double longitude, Set<Category> articleCategories) {
+			String address, Double latitude, Double longitude, Set<Category> articleCategories) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -62,7 +62,7 @@ public class Article {
 		this.description = description;
 		this.descriptionEn = descriptionEn;
 		this.picture = picture;
-		this.location = location;
+		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.articleCategories = articleCategories;
@@ -116,12 +116,12 @@ public class Article {
 		this.picture = picture;
 	}
 
-	public String getLocation() {
-		return location;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public Double getLatitude() {
