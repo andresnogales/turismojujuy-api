@@ -44,6 +44,9 @@ public class Article {
 	@Column(name="longitude", nullable = true)
 	private Double longitude;
 	
+	@Column(name="location_id", nullable = false)
+	private Integer locationId;
+	
 	@ManyToMany
 	@JoinTable(
 	  name = "article_categories", 
@@ -54,7 +57,7 @@ public class Article {
 	public Article() {}
 
 	public Article(Integer id, String title, String titleEn, String description, String descriptionEn, String picture,
-			String address, Double latitude, Double longitude, Set<Category> articleCategories) {
+			String address, Double latitude, Double longitude, Integer locationId, Set<Category> articleCategories) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -65,6 +68,7 @@ public class Article {
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
+		this.locationId = locationId;
 		this.articleCategories = articleCategories;
 	}
 
@@ -140,6 +144,14 @@ public class Article {
 		this.longitude = longitude;
 	}
 
+	public Integer getLocationId() {
+		return locationId;
+	}
+
+	public void setLocationId(Integer locationId) {
+		this.locationId = locationId;
+	}
+
 	public Set<Category> getArticleCategories() {
 		return articleCategories;
 	}
@@ -147,6 +159,8 @@ public class Article {
 	public void setArticleCategories(Set<Category> articleCategories) {
 		this.articleCategories = articleCategories;
 	}
+
+	
 	
 	
 }
