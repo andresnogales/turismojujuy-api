@@ -14,7 +14,6 @@ public class LocationService {
 	@Autowired
 	private ILocationRepository locationRepository;
 	
-	
 	public Location findById(int id){
 		Location location = locationRepository.findById(id);
 		if (location == null) {

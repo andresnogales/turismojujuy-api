@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -26,10 +27,10 @@ public class Article {
 	@Column(name = "title_en", nullable = true, length = 100)
 	private String titleEn;
 	
-	@Column(name="description", nullable = false)
+	@Column(name="description", nullable = false, columnDefinition = "text")
 	private String description;
 	
-	@Column(name="description_en", nullable = true)
+	@Column(name="description_en", nullable = true, columnDefinition = "text")
 	private String descriptionEn;
 	
 	@Column(name = "picture", nullable = true, length = 200)
