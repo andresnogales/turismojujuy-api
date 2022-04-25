@@ -22,5 +22,12 @@ public class CategoryService {
 	public Category findById(int id) {
 		return categoryRepository.findById(id);
 	}
+	
+	public Category findByIdWithArticles(int id) {
+		Category category = categoryRepository.findById(id);
+		List<Article> articles = categoryRepository.findArticles(id);
+		category.setArticles(articles);
+		return category;
+	}
 
 }

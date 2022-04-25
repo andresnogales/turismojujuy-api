@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.andresnogales.turismojujuy.model.Article;
+import com.andresnogales.turismojujuy.model.Category;
 import com.andresnogales.turismojujuy.model.Region;
 import com.andresnogales.turismojujuy.repository.IRegionRepository;
 
@@ -24,6 +26,13 @@ public class RegionService {
 	
 	public List<Region> findAll(){
 		return regionRepository.findAll();
+	}
+	
+	public Region findByIdWithArticles(int id) {
+		Region region = regionRepository.findById(id);
+		List<Article> articles = regionRepository.findArticles(id);
+		region.setArticles(articles);
+		return region;
 	}
 
 }

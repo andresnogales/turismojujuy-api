@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.andresnogales.turismojujuy.service.ArticleService;
 
 @RestController
-@RequestMapping("api/article")
+@RequestMapping("api/articles")
 public class ArticleController {
 
 	@Autowired
@@ -31,4 +31,9 @@ public class ArticleController {
 	public ResponseEntity<?> getArticlesByCategory(@PathVariable("id") Integer id){
 		return new ResponseEntity<>(articleService.findByCategory(id),HttpStatus.OK);
 	}
+	
+	@GetMapping("/region/{id}")
+	public ResponseEntity<?> getArticlesByRegion(@PathVariable("id") Integer id){
+		return new ResponseEntity<>(articleService.findByRegion(id),HttpStatus.OK);
+	} 
 }

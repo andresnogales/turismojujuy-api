@@ -12,6 +12,10 @@ import javax.persistence.Lob;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "articles")
@@ -53,8 +57,9 @@ public class Article {
 	  name = "article_categories", 
 	  joinColumns = @JoinColumn(name = "article_id"), 
 	  inverseJoinColumns = @JoinColumn(name = "category_id"))
-	Set<Category> articleCategories;
-	
+	@JsonIgnoreProperties({"articles"})
+	private Set<Category> articleCategories;
+
 	public Article() {}
 
 	public Article(Integer id, String title, String titleEn, String description, String descriptionEn, String picture,

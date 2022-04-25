@@ -13,5 +13,6 @@ public interface ICategoryRepository  extends CrudRepository<Category, Integer> 
 	public List<Category> findAll();
 	public Category findById(int id);
 	
-	
+	@Query("select ac.article from ArticleCategories ac where ac.category.id = :idCategory")
+	public List<Article> findArticles(int idCategory);
 }

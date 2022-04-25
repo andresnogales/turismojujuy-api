@@ -38,4 +38,8 @@ public class ArticleService {
 		}
 		return articleRepository.findByArticleCategories(category);
 	}
+	
+	public List<Article> findByRegion(int id){
+		return articleRepository.findByRegion(id);
+	}
 }

@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 @Entity
 @Table(name = "regions")
@@ -33,19 +36,23 @@ public class Region {
 	@OneToMany(mappedBy="regionId")
     private List<Location> locations;
 	
+	@Transient
+	@JsonInclude(JsonInclude.Include.NON_NULL)
+    private List<Article> articles;
+	
 	public Region() {
 	}
 
-	public Region(Integer id, String name, String description, String descriptionEn, String picture,
-			List<Location> locations) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.descriptionEn = descriptionEn;
-		this.picture = picture;
-		this.locations = locations;
+
+	public List<Article> getArticles() {
+		return articles;
 	}
+
+
+	public void setArticles(List<Article> articles) {
+		this.articles = articles;
+	}
+
 
 	public Integer getId() {
 		return id;

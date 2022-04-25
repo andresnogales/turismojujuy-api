@@ -26,5 +26,10 @@ public class CategoryController {
 	public ResponseEntity<?> getCategory(@PathVariable("id") Integer id){
 		return new ResponseEntity<>(categoryService.findById(id),HttpStatus.OK);
 	}
+	
+	@GetMapping("/{id}/articles")
+	public ResponseEntity<?> getCategoryWithArticles(@PathVariable("id") Integer id){
+		return new ResponseEntity<>(categoryService.findByIdWithArticles(id),HttpStatus.OK);
+	}
 
 }

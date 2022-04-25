@@ -26,4 +26,9 @@ public class RegionController {
 	public ResponseEntity<?> getRegions(){
 		return new ResponseEntity<>(regionService.findAll(),HttpStatus.OK);
 	}
+	
+	@GetMapping("/{id}/articles")
+	public ResponseEntity<?> getRegionWithArticles(@PathVariable("id") Integer id){
+		return new ResponseEntity<>(regionService.findByIdWithArticles(id),HttpStatus.OK);
+	}
 }
