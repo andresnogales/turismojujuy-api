@@ -1,16 +1,16 @@
-title,title_en
-"Aventura y Naturaleza","Adventura and Nature"
-"Áreas Protegidas","Protected Areas"
-"Avistaje de Aves","Bird Watching"
-Contemplación,Contemplation
-Bienestar,Welfare
-"Cocina y Vinos","Cuisine and wines"
-Culturales,Cultural
-Arqueología,Archeology
-Artesanias,Handicrafts
-Museos,Museums
-Reliosos,Religious
-Imperdibles,"Must see"
-"Turismo Comunitario","Community Tourism"
-"Fiestas y Celebraciones","Parties and Celebrations"
-Eventos,Events
+"id","title","title_en","picture","thumbnail","featured"
+2,Áreas Protegidas,Protected Areas,,,
+3,Avistaje de Aves,Bird Watching,,,
+4,Contemplación,Contemplation,,,
+5,Bienestar,Welfare,,,
+8,Arqueología,Archeology,,,
+9,Artesanias,Handicrafts,,,
+10,Museos,Museums,,,
+14,Fiestas y Celebraciones,Parties and Celebrations,,,
+15,Eventos,Events,,,
+6,Cocina y Vinos,Cuisine and wines,http://c2210489.ferozo.com/wp-content/uploads/img_Coc_Vin1.png,http://www.turismo.jujuy.gob.ar/wp-content/uploads/Cocina_Vinos1-300x300.png,true
+7,Culturales,Cultural,http://c2210489.ferozo.com/wp-content/uploads/img_Cul.png,http://www.turismo.jujuy.gob.ar/wp-content/uploads/Cultural-300x300.png,true
+11,Reliosos,Religious,http://c2210489.ferozo.com/wp-content/uploads/img_Rel.png,http://www.turismo.jujuy.gob.ar/wp-content/uploads/Religioso-300x300.png,true
+12,Imperdibles,Must see,http://c2210489.ferozo.com/wp-content/uploads/img_Imp.png,http://www.turismo.jujuy.gob.ar/wp-content/uploads/Imperdibles-300x300.png,true
+13,Turismo Comunitario,Community Tourism,http://c2210489.ferozo.com/wp-content/uploads/img_Com.png,http://www.turismo.jujuy.gob.ar/wp-content/uploads/Comunitario-300x300.png,true
+1,Aventura y Naturaleza,Adventure and Nature,http://c2210489.ferozo.com/wp-content/uploads/img_Nat_Ave.png,http://www.turismo.jujuy.gob.ar/wp-content/uploads/Aventura_Naturaleza-300x300.png,true
