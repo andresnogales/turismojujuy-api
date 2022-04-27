@@ -4,9 +4,11 @@ package com.andresnogales.turismojujuy.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.andresnogales.turismojujuy.model.User;
@@ -14,6 +16,7 @@ import com.andresnogales.turismojujuy.service.AuthenticationService;
 import com.andresnogales.turismojujuy.service.UserService;
 
 @RestController
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 @RequestMapping("/api/authentication/")
 public class AuthenticationController {
 	
